@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './shared/material.module';
-import { MatIconModule } from '@angular/material';
 
 import 'hammerjs';
 @NgModule({
@@ -15,9 +13,7 @@ import 'hammerjs';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    MatIconModule,
-    MaterialModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
