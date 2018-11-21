@@ -1,0 +1,21 @@
+
+<mat-sidenav-container class="cs-sidenav-container" *ngIf="shouldRun" >
+  <mat-sidenav #sideNav mode="side" class="cs-sidenav" opened >
+    <mat-toolbar color="primary">
+      Menu
+    </mat-toolbar>
+    <mat-list>
+      <mat-list-item>1</mat-list-item>
+      <mat-list-item>2</mat-list-item>
+      <mat-list-item>3</mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="cs-sidenav-content">
+      <cs-toolbar></cs-toolbar>
+      <router-outlet></router-outlet>
+      <button mat-button (click)="sideNav.toggle()">
+          Open Side Nav
+        </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
