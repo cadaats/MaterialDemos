@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { OrdermanagementRoutingModule } from './ordermanagement-routing.module';
 import { OmsAppComponent } from './oms-app.component';
@@ -18,6 +19,7 @@ import { MaterialModule } from '../shared/material.module';
     OrdermanagementRoutingModule,
     MaterialModule,
     MatIconModule,
+    FlexLayoutModule,
     FormsModule
   ]
 })

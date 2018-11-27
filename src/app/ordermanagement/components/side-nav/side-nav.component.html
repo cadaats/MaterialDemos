@@ -1,6 +1,9 @@
 
 <mat-sidenav-container class="cs-sidenav-container" *ngIf="shouldRun" >
-  <mat-sidenav #sideNav mode="side" class="cs-sidenav" opened >
+  <mat-sidenav #sideNav class="cs-sidenav"
+        [mode]="isSmallScreen() ? 'over' : 'side'"
+        [opened]="!isSmallScreen()" mat-elevation-z10>
+
     <mat-toolbar color="primary">
       Menu
     </mat-toolbar>
@@ -14,7 +17,7 @@
       <cs-toolbar></cs-toolbar>
       <router-outlet></router-outlet>
       <button mat-button (click)="sideNav.toggle()">
-          Open Side Nav
+          {{sideNav.opened ? 'Close' : 'Open'}} Toolbar
         </button>
   </mat-sidenav-content>
 </mat-sidenav-container>
