@@ -11,7 +11,6 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { MaterialModule } from '../shared/material.module';
 
-
 @NgModule({
   declarations: [OmsAppComponent, ToolbarComponent, MainContentComponent, SideNavComponent],
   imports: [

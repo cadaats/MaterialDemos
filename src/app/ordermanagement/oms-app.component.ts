@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'cs-oms-app',
@@ -9,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OmsAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(iconRegistry: MatIconRegistry, domSanitizer: DomSanitizer) {
+    iconRegistry.addSvgIconSet(domSanitizer.bypassSecurityTrustResourceUrl('../../assets/avatars.svg'));
+  }
 
   ngOnInit() {
   }
