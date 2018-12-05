@@ -14,7 +14,7 @@
     </mat-list> -->
     <mat-nav-list>
       <mat-list-item *ngFor="let user of users | async">
-        <a matLine href="#">
+        <a matLine [routerLink]= "['/oms', user.id]">
           <mat-icon svgIcon= "{{user.avatar}}"></mat-icon>{{user.name}}
         </a>
       </mat-list-item>
@@ -22,10 +22,10 @@
   </mat-sidenav>
   <mat-sidenav-content class="cs-sidenav-content">
       <cs-toolbar></cs-toolbar>
-      <router-outlet></router-outlet>
       <button mat-button (click)="sideNav.toggle()">
           {{sideNav.opened ? 'Close' : 'Open'}} Toolbar
-        </button>
+      </button>
+      <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

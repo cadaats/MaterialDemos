@@ -7,6 +7,7 @@ const routes: Routes = [
   {
     path: '', component: OmsAppComponent,
     children: [
+      {path: ':id', component: MainContentComponent},
       {path: '', component: MainContentComponent}
     ]
   },

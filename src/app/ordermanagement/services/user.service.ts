@@ -28,6 +28,11 @@ export class UserService {
               console.log('Failed to fetch users');
             });
   }
+
+  getUserById(id: number): User {
+    return this.dataStore.users.find(u => u.id == id);
+  }
+
   get users(): Observable<User[]> {
     return this._users.asObservable();
     // return this.httpClient.get<User[]>(this.usersURL).pipe(
